@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-
     <title>Pergunta 1</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
@@ -14,7 +13,6 @@
     <hr>
     <h2>Que animal pôe o maior ovo?</h2>
     <hr>
-    <br>
 
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -41,7 +39,6 @@
     <p>Não estás à altura??? Então se calhar é melhor desistires!</p>
     <br>
     <a href="{{ url_for('desistir') }}" class="btn_desistir">Desistir</a>
-
 </body>
 
 </html>

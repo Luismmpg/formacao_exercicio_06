@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from forms import RespostaForm, MensagemForm
+from forms import RespostaForm
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "segredo_nao_me_contes"
@@ -12,15 +12,15 @@ respostas = (
     "h2o",
 )
 
-# mensagens = []
 
-
+# Funcção que abre a página de entrada
 @app.route("/", methods=["GET", "POST"])
 def home():
     form = RespostaForm()
     return render_template("home.html", form=form)
 
 
+# Funções relativas a cada uma das 5 questões
 @app.route("/pergunta1", methods=["GET", "POST"])
 def pergunta1():
     form = RespostaForm()
@@ -76,29 +76,18 @@ def pergunta5():
     return render_template("pergunta5.html", form=form)
 
 
+# Função que determina a vitória do jogo e abre a página de Vitória
 @app.route("/vitoria", methods=["GET", "POST"])
 def vitoria():
-    form = MensagemForm()
-    # if form.validate_on_submit():
-    #     mensagem = form.mensagem.data
-    #     mensagens.append(mensagem)
-    #     print(f"Mensagem recebida: {mensagem}")
-    #     flash(
-    #         f"Mensagem enviada com sucesso! Já existem {len(mensagens)} mensagem(s).",
-    #         "success",
-    #     )
+    form = RespostaForm()
     return render_template("vitoria.html", form=form)
 
 
+# Função que permite ao jogador desistir a meio do jogo e apresenta a página desistir.html
 @app.route("/desistir", methods=["GET", "POST"])
 def desistir():
     form = RespostaForm()
     return render_template("desistir.html", form=form)
-
-
-# @app.route("/mensagens")
-# def ver_mensagens():
-#     return render_template("mensagens.html", mensagens=mensagens)
 
 
 if __name__ == "__main__":
