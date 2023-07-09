@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
 
     <title>Pergunta 1</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}?v=2">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 
 <body>
     <h1>1ª Questão</h1>
     <br>
     <hr>
-    <p> Qual o animal que pôe o maior ovo?</p>
+    <h2>Que animal pôe o maior ovo?</h2>
     <hr>
+    <br>
+
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
     {% for category, message in messages %}
@@ -28,6 +30,17 @@
         {{ form.submit() }}
     </form>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Não estás à altura??? Então se calhar é melhor desistires!</p>
+    <br>
+    <a href="{{ url_for('desistir') }}" class="btn_desistir">Desistir</a>
 
 </body>
 

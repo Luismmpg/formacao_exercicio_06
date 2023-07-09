@@ -1,24 +1,36 @@
 body {
-    background-color: rgb(236, 245, 188);
+    background-color: rgb(184, 253, 255);
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
 h1 {
-    color: rgb(4, 4, 206);
+    color: rgb(3, 3, 116);
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
-img {
+h2 {
+    color: rgb(167, 142, 3);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(24, 86, 201);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* img {
     width: 300px;
     height: 200px;
-}
+} */
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #6305dd;
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -28,9 +40,29 @@ img {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #853de2;
 }
 
 .btn:active {
-    background-color: #3e8e41;
+    background-color: #7725e2;
+}
+
+.btn_desistir {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #661203;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_desistir:hover {
+    background-color: #64261a;
+}
+
+.btn_desistir:active {
+    background-color: #5e1c0f;
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desistir!!!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+</head>
+
+<body>
+    <hr>
+    <h1>Desistir!?</h1>
+    <hr>
+    <br>
+    <br>
+    <h3>Não conseguiste resolver o meu desafio?</h3>
+    <h3>Não te preocupes, também tenho uma mensagem motivadora para ti...</h3>
+    <br>
+    <img src="{{ url_for('static', filename='desistir.jpg') }}" alt="Desistir">
+    <br>
+    <br>
+    <br>
+    <h3>Queres tentar novamente?</h3>
+    <h3>Por favor clica no botão "Iniciar".</h3>
+    <br>
+    <br>
+    <a href="{{ url_for('pergunta1') }}" class="btn">Iniciar</a>

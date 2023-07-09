@@ -3,28 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Caça ao Tesouro</title>
+    <title>Quiz do Luis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 
 
 </head>
 
 <body>
+    <hr>
+    <h1>Quiz do Luis!</h1>
+    <hr>
+    <br>
+    <h2>Bem vindo ao meu desafio.</h2>
+    <br>
+    <h3>O desafio que te proponho passa por responder acertadamente a 5 questões extremamente difíceis.</h3>
+    <h3>Se responderes acertadamente a todas elas, serás contemplado com uma mensagem motivadora no final.</h3>
+    <br>
+    <br>
+    <h3>Se achas que estás à altura de resolver este desafio, clica no botão Iniciar.</h3>
+    <br>
+    <br>
+    <br>
+    <a href="{{ url_for('pergunta1') }}" class="btn">Iniciar</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <font size="2">Nota: Tenho perfeita noção de que a esccolha das cores do site está horrível, mas estou a melhorar o
+        meu CSS,
+        prometo ;)</font>
 
-    <h1>Bem-vindo ao Quiz do Luis!</h1>
-    <p>Pergunta 0 - para eliminar e trocar por um botão para avançar na página</p>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    {% for category, message in messages %}
-    <p style="color: {{ 'red' if category == 'error' else 'green' }}">{{ message }}"</p>
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
-    <form method="POST" action="{{ url_for('home') }}">
-        {{ form.hidden_tag() }}
-        {{ form.resposta() }}
-        {{ form.submit() }}
-    </form>
+
+
 
 </body>
 

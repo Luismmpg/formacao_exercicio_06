@@ -12,7 +12,7 @@
     <h1>2ª Questão</h1>
     <br>
     <hr>
-    <p>Esta é a segunda questão?</p>
+    <h2>Quantas cores tem o arco-íris?</h2>
     <hr>
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -28,6 +28,17 @@
         {{ form.submit() }}
     </form>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Não estás à altura??? Então se calhar é melhor desistires!</p>
+    <br>
+    <a href="{{ url_for('desistir') }}" class="btn_desistir">Desistir</a>
 
 </body>
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conseguiste!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+    <h1>Parabéns! Superaste o desafio!!</h1>
+    <img src="{{ url_for('static', filename='consegui.jpg') }}" alt="Consegui" height="300">
+    <br>
+    <h1>Conforme prometido, aqui fica a tua mensagem inspiradora!</h1>
+    <img src="{{ url_for('static', filename='desafio.jpg') }}" alt="Desafio" height="300">
+
+    <br>
+    <br>
+    <br>
+    <h2>Jogar outra vez?</h2>
+    <br>
+    <a href="{{ url_for('pergunta1') }}" class="btn">Iniciar</a>
+
+</body>
+
+</html>
